@@ -1,0 +1,17 @@
+// Write a program that determines whether the number
+// is a leap year from the standard input.
+// A leap year is any year divisible by four, except those divisible by a hundred.
+// However, those divisible by four hundred will also be leap years.
+#include<stdio.h>
+#include<stdbool.h>
+
+int main(){
+
+    int year;
+    printf("Enter the year: ");
+    scanf("%d", &year);
+    bool isLeap = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+    printf("%s\n", isLeap ? "Leap year" : "not leap");
+
+    return 0;
+}
